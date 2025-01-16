@@ -11,7 +11,7 @@ from langchain.agents import tool
 
 # Flask app setup
 app = Flask(__name__)
-app.secret_key = 'mississippi6269'
+app.secret_key = 'Random_word'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
 
@@ -37,7 +37,7 @@ def example_tool(input_text: str) -> str:
 # Initialize LangChain agent
 llm = ChatGoogleGenerativeAI(
             model="gemini-1.5-flash",
-            google_api_key="AIzaSyDlm5KhhPDVbGo_Hsvp27-DrlUwER9IrYI"
+            google_api_key="API Key"
         )
 agent = initialize_agent([example_tool], llm, agent="zero-shot-react-description")
 
